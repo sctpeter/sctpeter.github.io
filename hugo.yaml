@@ -1,0 +1,9 @@
+baseURL: https://sctpeter.github.io/
+locale: zh-cn
+title: 个人博客
+theme: PaperMod
+
+params:
+  comments: true       
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
