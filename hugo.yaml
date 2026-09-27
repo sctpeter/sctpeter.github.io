@@ -4,6 +4,45 @@ title: 个人博客
 theme: PaperMod
 
 params:
-  comments: true       
+  comments: true
   ShowReadingTime: true
   ShowCodeCopyButtons: true
+
+  profileMode:
+    enabled: true
+    title: sctpeter
+    subtitle: 浙江大学大三 · ZJUSCT 队员 · 关注 HPC-AI
+    imageUrl: https://github.com/sctpeter.png
+    imageTitle: avatar
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: 文章
+        url: posts/
+      - name: 归档
+        url: archives/
+      - name: 标签
+        url: tags/
+      - name: 个人简介
+        url: about/
+
+  socialIcons:
+    - name: github
+      url: https://github.com/sctpeter
+    - name: email
+      url: mailto:sctpeter528@gmail.com
+
+menu:
+  main:
+    - name: 文章
+      url: posts/
+      weight: 10
+    - name: 归档
+      url: archives/
+      weight: 20
+    - name: 标签
+      url: tags/
+      weight: 30
+    - name: 个人简介
+      url: about/
+      weight: 40
