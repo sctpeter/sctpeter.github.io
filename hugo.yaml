@@ -5,9 +5,16 @@ languages:
     locale: zh-CN
     label: 中文
 title: 个人博客
+enableRobotsTXT: true
 theme: PaperMod
 
 params:
+  env: production
+  ShowFullTextinRSS: true
+  ShowRssButtonInSectionTermList: true
+  # 邮件订阅：在 follow.it 注册后，把订阅表单的 action 地址填到 formAction（留空则只显示 RSS）
+  followit:
+    formAction: ""
   comments: true
   # GitHub 登录评论（utterances），需在仓库安装 https://github.com/apps/utterances
   utterances:
@@ -42,6 +49,8 @@ params:
       url: https://github.com/sctpeter
     - name: email
       url: mailto:sctpeter528@gmail.com
+    - name: rss
+      url: https://sctpeter.github.io/posts/index.xml
 
 menu:
   main:

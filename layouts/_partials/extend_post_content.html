@@ -1,0 +1,23 @@
+{{- /* 文章末尾订阅框：RSS + Follow.it 邮件订阅（配置见 hugo.yaml 的 params.followit） */ -}}
+{{- if and (eq .Kind "page") (eq .Section "posts") }}
+<div class="subscribe-box">
+  <p class="subscribe-title">订阅更新</p>
+  {{- with site.Params.followit.formAction }}
+  <form class="subscribe-form" action="{{ . }}" method="post" target="_blank">
+    <input type="email" name="email" required placeholder="输入邮箱，有新文章时通知你" aria-label="邮箱地址">
+    <button type="submit">邮件订阅</button>
+  </form>
+  {{- end }}
+  <p class="subscribe-rss">
+    也可以用 RSS 阅读器订阅：<a href="{{ "posts/index.xml" | absURL }}" target="_blank" rel="noopener">{{ "posts/index.xml" | absURL }}</a>
+  </p>
+</div>
+<style>
+  .subscribe-box { margin-top: 40px; padding: 18px 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--entry); }
+  .subscribe-box .subscribe-title { font-weight: 600; margin-bottom: 10px; }
+  .subscribe-form { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .subscribe-form input { flex: 1 1 220px; padding: 6px 10px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--theme); color: var(--primary); }
+  .subscribe-form button { padding: 6px 16px; border-radius: var(--radius); background: var(--primary); color: var(--theme); cursor: pointer; }
+  .subscribe-box .subscribe-rss { font-size: 14px; color: var(--secondary); word-break: break-all; margin: 0; }
+</style>
+{{- end }}
