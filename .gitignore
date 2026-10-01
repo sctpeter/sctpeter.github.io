@@ -2,3 +2,5 @@ public/
 resources/_gen/
 .hugo_build.lock
 .claude/
+release.md
+.DS_Store
