@@ -13,7 +13,7 @@
 - `content/`：文章与页面（`posts/`、`about.md`、`archives.md`、分类/标签索引）。
 - `layouts/`：对主题模板的覆盖。不要直接修改 `themes/PaperMod`（git submodule），需要改模板时复制到 `layouts/` 下同路径再改。
   - `layouts/_partials/comments.html`：GitHub 登录评论（utterances，评论存为本仓库 Issues），配置在 `hugo.yaml` 的 `params.utterances`。
-  - `layouts/_partials/extend_post_content.html`：文章末尾的订阅框（RSS + Follow.it 邮件订阅，`params.followit.formAction` 为空时只显示 RSS）。
+  - `layouts/_partials/extend_post_content.html`：文章末尾的 RSS 订阅框（暂不接入邮件订阅服务）。
 - `.github/workflows/hugo.yaml`：部署流程（Hugo extended，版本见文件内 `HUGO_VERSION`）。
 
 ## 注意
