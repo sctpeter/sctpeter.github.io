@@ -1,0 +1,33 @@
+{{- /* GitHub 登录评论：utterances，评论存储为本仓库的 Issues */ -}}
+{{- with site.Params.utterances }}
+<div id="comments" class="comments">
+  <h2>评论</h2>
+  <div id="utterances-container"></div>
+</div>
+<script>
+  (function () {
+    const html = document.documentElement;
+    const themeOf = () => html.dataset.theme === "dark" ? "github-dark" : "github-light";
+
+    const s = document.createElement("script");
+    s.src = "https://utteranc.es/client.js";
+    s.setAttribute("repo", "{{ .repo }}");
+    s.setAttribute("issue-term", "{{ .issueTerm | default "pathname" }}");
+    {{- with .label }}
+    s.setAttribute("label", "{{ . }}");
+    {{- end }}
+    s.setAttribute("theme", themeOf());
+    s.setAttribute("crossorigin", "anonymous");
+    s.async = true;
+    document.getElementById("utterances-container").appendChild(s);
+
+    // 跟随 PaperMod 的明暗主题切换
+    new MutationObserver(() => {
+      const frame = document.querySelector(".utterances-frame");
+      if (frame) {
+        frame.contentWindow.postMessage({ type: "set-theme", theme: themeOf() }, "https://utteranc.es");
+      }
+    }).observe(html, { attributes: true, attributeFilter: ["data-theme"] });
+  })();
+</script>
+{{- end }}

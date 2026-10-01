@@ -9,6 +9,11 @@ theme: PaperMod
 
 params:
   comments: true
+  # GitHub 登录评论（utterances），需在仓库安装 https://github.com/apps/utterances
+  utterances:
+    repo: sctpeter/sctpeter.github.io
+    issueTerm: pathname
+    label: comment
   ShowReadingTime: true
   ShowCodeCopyButtons: true
 
