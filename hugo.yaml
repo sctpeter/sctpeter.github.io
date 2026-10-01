@@ -1,5 +1,9 @@
 baseURL: https://sctpeter.github.io/
-locale: zh-cn
+defaultContentLanguage: zh
+languages:
+  zh:
+    locale: zh-CN
+    label: 中文
 title: 个人博客
 theme: PaperMod
 
