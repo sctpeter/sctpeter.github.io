@@ -12,6 +12,9 @@ params:
   env: production
   ShowFullTextinRSS: true
   ShowRssButtonInSectionTermList: true
+  # 邮件订阅（follow.it）：订阅表单的 action 地址，留空则文章末尾只显示 RSS
+  followit:
+    formAction: "https://api.follow.it/subscription-form/bURLL0RLTS9OU0NSZHRuZ05rYndHd2E2NFdHRjZLQjBrQUZ0N2FOWTV6cEYweTZhdmV3bi9sUmwzZHk2WVFkdXJzVnlMbW8wQVg3VUc0WGxGZVpHTmVOeTIyUUhEOUNsSE85YlpnaDB4N3dicEY5OVhxNHpPZnRsejdmTTdXQWp8QnUyNEEvKzUvekZVWTd3YkJQN1NidDhoaU9LdkFpWmRDMU50UFpuRHByTT0=/8"
   comments: true
   # GitHub 登录评论（utterances），需在仓库安装 https://github.com/apps/utterances
   utterances:
