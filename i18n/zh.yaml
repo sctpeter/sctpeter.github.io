@@ -11,3 +11,5 @@
   translation: "邮件订阅"
 - id: subscribe_rss
   translation: "或用 RSS 阅读器订阅："
+- id: views
+  translation: "{n} 次阅读"

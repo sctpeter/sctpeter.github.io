@@ -25,3 +25,22 @@
     if (want !== current && alt[want]) location.replace(alt[want] + location.hash);
   })();
 </script>
+{{- /* 访问统计（GoatCounter）：记录每个页面的访问，并把阅读次数填到文章元信息里 */ -}}
+{{- with site.Params.goatcounter }}{{ if hugo.IsProduction }}
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var tpl = {{ i18n "views" }};
+    document.querySelectorAll(".gc-views[data-path]").forEach(function (el) {
+      fetch("https://{{ . }}.goatcounter.com/counter/" + encodeURIComponent(el.dataset.path) + ".json")
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d || !d.count) return;
+          el.querySelector(".gc-views-n").textContent = tpl.replace("{n}", d.count);
+          el.hidden = false;
+        })
+        .catch(function () {});
+    });
+  });
+</script>
+{{- end }}{{ end }}

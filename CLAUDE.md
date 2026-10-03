@@ -16,7 +16,8 @@
   - `layouts/_partials/comments.html`：GitHub 登录评论（utterances，评论存为本仓库 Issues），配置在 `hugo.yaml` 的 `params.utterances`。
   - `layouts/_partials/extend_post_content.html`：文章末尾的订阅框（follow.it 邮件订阅 + RSS，表单地址在 `hugo.yaml` 的 `languages.<lang>.params.followit.formAction`，中英文各一个，留空则只显示 RSS）。
   - `layouts/_partials/header.html`：覆盖主题的导航栏，语言切换按钮跳到当前页面的译文（没有译文时回到另一语言首页）。
-  - `layouts/_partials/extend_head.html`：按浏览器语言自动跳转到译文；用户手动切换后记在 localStorage，不再自动跳转。
+  - `layouts/_partials/extend_head.html`：按浏览器语言自动跳转到译文；用户手动切换后记在 localStorage，不再自动跳转。另外加载 GoatCounter 访问统计（站点代码在 `hugo.yaml` 的 `params.goatcounter`，只在生产构建中加载），并把阅读次数填进文章元信息。
+  - `layouts/_partials/post_meta.html`：覆盖主题的文章元信息，末尾加一个默认隐藏的「N 次阅读」占位，取到 GoatCounter 计数后才显示。
 - `.github/workflows/hugo.yaml`：部署流程（Hugo extended，版本见文件内 `HUGO_VERSION`）。
 
 ## 注意

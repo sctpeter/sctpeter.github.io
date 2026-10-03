@@ -11,3 +11,5 @@
   translation: "Subscribe"
 - id: subscribe_rss
   translation: "Or subscribe with an RSS reader: "
+- id: views
+  translation: "{n} views"
