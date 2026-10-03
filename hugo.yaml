@@ -81,9 +81,9 @@ languages:
     weight: 2
     title: sctpeter's Blog
     params:
-      # 英文订阅源（/en/posts/index.xml）在 follow.it 登记后，把表单地址填在这里
+      # 英文订阅源（/en/posts/index.xml）对应的 follow.it 表单，与中文订阅者名单相互独立
       followit:
-        formAction: ""
+        formAction: "https://api.follow.it/subscription-form/b2x1QTg4aGg0M0dBRUdRYmk4VHh2b3RMbjFTVTVCZlM4MVhiQjV5MGpqWFlQQ2NsM0ZicnFVaUIrQjF0SVlGc1kvdzlIQU0yWkl6a1VSUnNTMnlWa3RRS0dwQm1xbGREbnpOeTdMMWVlTDFKdFZ3eE45RmRvTFRZcitUcDRZWEt8cnhrQnJ0Zm9lbHhsblhRQzFBbjlyS2VvRDNSRDNOcFdJZG1PYURLK0RrQT0=/8"
       profileMode:
         enabled: true
         title: sctpeter
