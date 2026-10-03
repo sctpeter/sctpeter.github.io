@@ -1,0 +1,27 @@
+{{- /* 语言自动切换：首次访问时按浏览器语言跳转到对应译文；用户手动点过语言切换后记住选择，不再自动跳转 */ -}}
+{{- $alt := dict }}
+{{- /* 只在当前页面有译文时跳转，没有译文的文章保持原样 */ -}}
+{{- range .Translations }}{{ $alt = merge $alt (dict .Lang .RelPermalink) }}{{ end }}
+<script>
+  (function () {
+    var KEY = "preferred-lang";
+    var current = {{ .Lang }};
+    var alt = {{ $alt }};
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+
+    // 手动切换语言时记住选择
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a[data-lang]");
+      if (a) { try { localStorage.setItem(KEY, a.dataset.lang); } catch (e) {} }
+    });
+
+    if (/bot|crawl|spider|slurp/i.test(navigator.userAgent)) return;
+    var want = stored;
+    if (!want) {
+      var langs = navigator.languages || [navigator.language || ""];
+      want = String(langs[0] || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+    }
+    if (want !== current && alt[want]) location.replace(alt[want] + location.hash);
+  })();
+</script>

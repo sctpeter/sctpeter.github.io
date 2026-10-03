@@ -1,0 +1,13 @@
+# Site-specific strings (merged with themes/PaperMod/i18n/en.yaml)
+- id: comments
+  translation: "Comments"
+- id: subscribe_title
+  translation: "Subscribe"
+- id: subscribe_placeholder
+  translation: "Your email — get notified of new posts"
+- id: subscribe_email_label
+  translation: "Email address"
+- id: subscribe_button
+  translation: "Subscribe"
+- id: subscribe_rss
+  translation: "Or subscribe with an RSS reader: "

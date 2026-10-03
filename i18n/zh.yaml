@@ -1,0 +1,13 @@
+# 站点自定义文案（与主题 themes/PaperMod/i18n/zh.yaml 合并）
+- id: comments
+  translation: "评论"
+- id: subscribe_title
+  translation: "订阅更新"
+- id: subscribe_placeholder
+  translation: "输入邮箱，有新文章时通知你"
+- id: subscribe_email_label
+  translation: "邮箱地址"
+- id: subscribe_button
+  translation: "邮件订阅"
+- id: subscribe_rss
+  translation: "或用 RSS 阅读器订阅："
