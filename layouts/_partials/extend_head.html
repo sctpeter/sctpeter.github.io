@@ -32,8 +32,10 @@
   document.addEventListener("DOMContentLoaded", function () {
     var tpl = {{ i18n "views" }};
     document.querySelectorAll(".gc-views[data-path]").forEach(function (el) {
+      // GoatCounter 存储路径时会去掉末尾的 /（/posts/foo/ 记为 /posts/foo），查询时要一致
+      var path = el.dataset.path.replace(/(.)\/$/, "$1");
       // no-store：不用浏览器缓存的旧结果（尤其是还没数据时缓存下来的 404）
-      fetch("https://{{ . }}.goatcounter.com/counter/" + encodeURIComponent(el.dataset.path) + ".json", { cache: "no-store" })
+      fetch("https://{{ . }}.goatcounter.com/counter/" + encodeURIComponent(path) + ".json", { cache: "no-store" })
         // 404 表示这个页面还没有访问记录，显示为 0；其他错误（被拦截、未开启公开计数）则不显示
         .then(function (r) { return r.ok ? r.json() : r.status === 404 ? { count: "0" } : null; })
         .then(function (d) {
