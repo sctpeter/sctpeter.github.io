@@ -32,7 +32,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     var tpl = {{ i18n "views" }};
     document.querySelectorAll(".gc-views[data-path]").forEach(function (el) {
-      // GoatCounter 存储路径时会去掉末尾的 /（/posts/foo/ 记为 /posts/foo），查询时要一致
+      // GoatCounter 后台记录的路径不带末尾 /（/posts/foo/ 记为 /posts/foo），查询时保持一致
+      // 注意：GoatCounter 服务端会把计数结果（包括 404）缓存约 4 小时，新数字要过一阵才会显示
       var path = el.dataset.path.replace(/(.)\/$/, "$1");
       // no-store：不用浏览器缓存的旧结果（尤其是还没数据时缓存下来的 404）
       fetch("https://{{ . }}.goatcounter.com/counter/" + encodeURIComponent(path) + ".json", { cache: "no-store" })

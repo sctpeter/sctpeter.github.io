@@ -22,6 +22,7 @@ params:
   # 访问统计（GoatCounter），后台：https://sctpeter.goatcounter.com
   # 只在生产构建（hugo / GitHub Actions）中加载，本地 hugo server 不计数
   # 文章阅读次数需在后台 Settings 勾选 “Allow adding visitor counts on your website”，否则不显示；没有访问记录时显示 0
+  # GoatCounter 服务端会缓存计数约 4 小时，文章里的阅读次数比后台数字滞后
   goatcounter: sctpeter
   ShowCodeCopyButtons: true
 
