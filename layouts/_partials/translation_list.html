@@ -1,4 +1,4 @@
-{{- /* 站点覆盖：.Language.LanguageName 已弃用，改用 .Language.Label */ -}}
+{{- /* 站点覆盖：.Language.LanguageName 已弃用，改用 .Language.Label；链接带 data-lang，点击后记住语言选择（见 extend_head.html），否则会被自动跳转弹回 */ -}}
 {{- if .IsTranslated -}}
     {{- if (ne .Layout "search") }}
         {{- if or (.Param "author") (.Param "ShowReadingTime") (not .Date.IsZero) }}
@@ -9,7 +9,7 @@
     <ul class="i18n_list">
         {{- range .Translations }}
         <li>
-            <a href="{{ .Permalink }}">
+            <a href="{{ .Permalink }}" data-lang="{{ .Lang }}">
                 {{- if (and site.Params.displayFullLangName (.Language.Label)) }}
                 {{- .Language.Label | emojify -}}
                 {{- else }}
