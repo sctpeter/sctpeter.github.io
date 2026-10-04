@@ -1,10 +1,12 @@
 {{- $scratch := newScratch }}
+{{- /* 阅读时间、阅读次数只在打开的文章页显示；列表页（含栏目卡片）只显示日期。page 是当前渲染的顶层页面 */ -}}
+{{- $isOwnPage := eq page . }}
 
 {{- if not .Date.IsZero -}}
     {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
 {{- end }}
 
-{{- if (.Param "ShowReadingTime") -}}
+{{- if and $isOwnPage (.Param "ShowReadingTime") -}}
     {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime)))) }}
 {{- end }}
 
@@ -25,6 +27,6 @@
 {{- end -}}
 
 {{- /* 阅读次数（GoatCounter）：先隐藏，extend_head.html 里的脚本取到计数后再显示 */ -}}
-{{- if and site.Params.goatcounter hugo.IsProduction }}
+{{- if and $isOwnPage site.Params.goatcounter hugo.IsProduction }}
     {{- printf "<span class=\"gc-views\" data-path=\"%s\" hidden>&nbsp;·&nbsp;<span class=\"gc-views-n\"></span></span>" .RelPermalink | safeHTML -}}
 {{- end -}}
