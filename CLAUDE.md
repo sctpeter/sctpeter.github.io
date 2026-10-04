@@ -4,7 +4,7 @@
 
 ## 工作约定
 
-- **排版、功能上的调整：直接提交并推送到 `main` 分支即可**，不需要新建分支或开 Pull Request。
+- **排版、功能上的调整：直接提交并推送到 `main` 分支即可**，不需要新建分支或开 Pull Request。用户手工修改也一并提交`git add -A `
 - 推送前先本地构建确认无报错：`hugo --gc --minify`。
 
 ## 排查问题与接入第三方服务
@@ -32,7 +32,18 @@
 
 - 单个页面可在 front matter 中用 `comments: false` 关闭评论（如 `about.md`）。
 - 站点是中英双语：中文为默认语言（根路径），英文在 `/en/`。新增模板文案时用 `i18n` 函数，并在 `i18n/zh.yaml`、`i18n/en.yaml` 中都补上。
-- Claude 翻译的英文页面，在正文末尾标注 `*This post was translated from the Chinese original by Claude.*`。
+- Claude 翻译的英文页面，在正文末尾标注 `*This post was translated from the Chinese original by Claude.*`。如果是Codex翻译的，则标注Codex。
 - 评论按语言分开（utterances 的 `pathname` 映射，中英文页面路径不同）。
 - GoatCounter（已查源码/文档确认）：公开计数接口 `/counter/<path>.json` 在服务端缓存约 4 小时（包括 404），文章里的阅读次数会滞后，无法关闭；后台数据约 10 秒写入一次；同一访客 8 小时内重复访问同一页面只算 1 次；中英文页面路径不同，分开计数。
+
+## 工作流
+
+- 不论什么流程，先git pull拉取最新内容
+- 新增文件
+  - 先与用户沟通清楚新增的文件放置路径，是否需要放到对应的类别中
+  - 然后从temp里面把文件移动到对应路径
+  - 把文件翻译成英文并且放置到英文版本对应路径
+  - 修改相关配置
+  - 本地构建与检查
+  - 推送
 

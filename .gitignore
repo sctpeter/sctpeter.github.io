@@ -4,3 +4,4 @@ resources/_gen/
 .claude/
 release.md
 .DS_Store
+temp/
