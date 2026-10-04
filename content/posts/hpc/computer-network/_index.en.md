@@ -1,3 +1,3 @@
 ---
-title: Computer Networks
+title: Computer Network
 ---

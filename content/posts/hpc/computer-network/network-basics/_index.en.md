@@ -1,3 +1,3 @@
 ---
-title: Networking Fundamentals
+title: Network Basics
 ---
