@@ -8,7 +8,7 @@ categories:
 
 "莫教冰鉴负初心" — "let not the ice mirror betray the original aspiration" — comes from a poem by the Qianlong Emperor. It is also an exhortation that Hangzhou High School (杭州高级中学) gives its students, and it carries memories of our time there. People around me often quote the couplet "而今更笃凌云志，莫教冰鉴负初心" — "now hold even more firmly to your soaring ambitions, and let not the ice mirror betray the original aspiration" — as encouragement to keep working hard and never forget why we started.
 
-But after reading the original poem, I found that its actual meaning points somewhere else.
+But after reading the original poem, I found that its original meaning points somewhere else.
 
 ![The original poem written by the Qianlong Emperor at the imperial examination hall](zhigongtang-poem.png)
 
