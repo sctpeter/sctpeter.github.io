@@ -18,7 +18,7 @@ The Zhigong Hall (至公堂) was where the examiners worked inside the imperial 
 
 In the original poem, the one holding the ice mirror was the examiner. Today, the one holding it is ourselves.
 
-As AI develops rapidly, I've noticed that some people around me are growing more restless: some compare titles with one another, while others are left lost by all kinds of radical claims about AI. It suddenly struck me that what makes us betray our original aspiration may not be hardship that makes us retreat, nor comfort that makes us slack off, but the restlessness of this era, which quietly clouds our judgment and makes it hard to persevere.
+As AI develops rapidly, I've noticed that some people around me are growing more restless: some compare titles with one another, while others are left lost by all kinds of radical claims about AI. It suddenly struck me that what makes us betray our original aspiration may not be hardship that makes us retreat, nor comfort that makes us slack off, nor even the examiner's eye, but perhaps the restlessness of this era, which quietly clouds our judgment and makes it hard to persevere.
 
 The basis for our judgments and actions should not be what the people around us have, nor conclusions others have drawn online. It should be drawing valuable information from our surroundings, thinking independently, judging for ourselves, and then pursuing our dreams with determination.
 
