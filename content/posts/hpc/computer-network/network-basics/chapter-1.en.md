@@ -8,6 +8,8 @@ title: 'Computer Networking Notes: Chapter 1'
 
 Reference: https://gaia.cs.umass.edu/kurose_ross/videos/1/
 
+These notes are based on the course by J.F. Kurose & K.W. Ross; copyright of the course material belongs to the original authors (https://gaia.cs.umass.edu/kurose_ross/ppt.php).
+
 ### Basic Concepts
 
 ISP: Internet Service Provider.

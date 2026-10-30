@@ -13,7 +13,7 @@ I'm a junior undergraduate at Zhejiang University.
 ## Experience
 
 - Member of the Zhejiang University Supercomputing Team (ZJUSCT)
-- Recipient of the National Scholarship
+- Recipient of the National Scholarship (2024–2025 academic year)
 - Competed in the ISC and ASC world supercomputing competitions
 - Cluster operations
 

@@ -8,6 +8,8 @@ title: 'Computer Networking Notes: Chapter 2'
 
 Reference: https://gaia.cs.umass.edu/kurose_ross/videos/2/
 
+These notes are based on the course by J.F. Kurose & K.W. Ross; copyright of the course material belongs to the original authors (https://gaia.cs.umass.edu/kurose_ross/ppt.php).
+
 ### HTTP
 
 - Hypertext Transfer Protocol

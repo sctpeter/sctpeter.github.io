@@ -8,6 +8,8 @@ title: '计算机网络学习笔记：第一章'
 
 参考资料: https://gaia.cs.umass.edu/kurose_ross/videos/1/
 
+本笔记参考 J.F. Kurose & K.W. Ross 的课程，课程内容版权归原作者所有(https://gaia.cs.umass.edu/kurose_ross/ppt.php)
+
 ### 基本概念
 
 ISP: 互联网服务提供商。

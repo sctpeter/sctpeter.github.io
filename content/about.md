@@ -13,7 +13,7 @@ ShowPostNavLinks: false
 ## 经历
 
 - 浙江大学超算队（ZJUSCT）队员
-- 曾获国家奖学金
+- 曾获 2024-2025 学年国家奖学金
 - ISC ,ASC世界超算大赛经历
 - 集群运维
 

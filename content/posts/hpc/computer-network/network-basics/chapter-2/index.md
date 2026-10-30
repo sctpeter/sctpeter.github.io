@@ -8,6 +8,8 @@ title: '计算机网络学习笔记：第二章'
 
 参考资料： https://gaia.cs.umass.edu/kurose_ross/videos/2/
 
+本笔记参考 J.F. Kurose & K.W. Ross 的课程，课程内容版权归原作者所有(https://gaia.cs.umass.edu/kurose_ross/ppt.php)
+
 ### HTTP
 
 - hypertext transfer protocol
