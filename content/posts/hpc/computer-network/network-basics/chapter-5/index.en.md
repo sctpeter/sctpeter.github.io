@@ -86,9 +86,23 @@ This is the core update formula: the shortest distance from x to y is the minimu
 - Hot potato routing
   - When a host inside an AS sends to another AS, among the gateways that can reach the destination prefix, choose the one with the lowest intra-AS routing cost.
   - Note that hot potato routing is not the only rule; there may be rules with higher priority.
-- ICMP
-  - Also carried in the payload of an IP packet, but we don't consider it a transport-layer protocol.
-  - When the TTL drops to 0, a router may reply with ICMP to report it. When UDP reaches the destination and the port isn't open, the destination host also replies with ICMP.
+
+### SDN (software defined networking)
+
+![SDN control plane](sdn.png)
+
+- SDN (software defined networking)
+  - Separation of the control plane and data plane: a centralized controller computes routes, and switches simply forward according to the flow tables the controller installs.
+  - Flow tables use match + action: match on multiple header fields, then perform an action such as forward, drop, or modify; the controller installs flow tables via protocols such as OpenFlow.
+  - Benefits
+    - Paths can be specified per flow, per source address, or by any other criteria, enabling traffic engineering that isn't limited to shortest paths.
+    - The controller has a global view, making centralized network management easier.
+    - The same flow-table mechanism can implement switching, routing, firewalls, NAT, and more.
+
+### ICMP
+
+- Also carried in the payload of an IP packet, but we don't consider it a transport-layer protocol.
+- When the TTL drops to 0, a router may reply with ICMP to report it. When UDP reaches the destination and the port isn't open, the destination host also replies with ICMP.
 
 ---
 

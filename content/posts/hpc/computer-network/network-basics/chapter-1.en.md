@@ -37,12 +37,12 @@ The five-layer model is the one that corresponds to real network protocols.
 
 ### Data Units
 
-| Layer                 | Data Unit           | Example                     |
-| --------------------- | ------------------- | --------------------------- |
-| Layer 4: Transport    | Segment / Datagram  | TCP segment, UDP datagram   |
-| Layer 3: Network      | Packet              | IP packet                   |
-| Layer 2: Data Link    | Frame               | Ethernet frame              |
-| Layer 1: Physical     | Bit                 | Electrical/optical signals on the wire |
+| Layer                 | Data Unit                                                    | Example                     |
+| --------------------- | ------------------------------------------------------------ | --------------------------- |
+| Layer 4: Transport    | Segment / Datagram (this course generally calls both a segment) | TCP segment, UDP datagram   |
+| Layer 3: Network      | Packet (this course generally calls it a datagram)           | IP packet                   |
+| Layer 2: Data Link    | Frame                                                        | Ethernet frame              |
+| Layer 1: Physical     | Bit                                                          | Electrical/optical signals on the wire |
 
 - The data portion of an Ethernet frame holds exactly one IP packet
 - The data portion of an IP packet holds exactly one TCP segment or UDP datagram
